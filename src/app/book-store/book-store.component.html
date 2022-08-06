@@ -1,0 +1,30 @@
+<div style="border: 1px solid black; padding: 10px;">
+
+  <div style="width: 100%;">
+    <div fxLayout="col" fxLayout.xs="column">
+      <div fxFlex="50" style="text-align: center;">
+        <span style="font-size: large;">Title</span>
+        <span (click)="toggleSort('title')">
+          <img *ngIf="titleSortStatus == 1" src="../../assets/sort-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="titleSortStatus == 2" src="../../assets/sort-down-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="titleSortStatus == 3" src="../../assets/sort-up-solid.svg" height="15px" width="15px"/>
+        </span>
+      </div>
+      <div fxFlex="50" style="text-align: center;">
+        <span style="font-size: large;">Votes</span>
+        <span (click)="toggleSort('votes')">
+          <img *ngIf="votesSortStatus == 1" src="../../assets/sort-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="votesSortStatus == 2" src="../../assets/sort-down-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="votesSortStatus == 3" src="../../assets/sort-up-solid.svg" height="15px" width="15px"/>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutAlign="flex-start">
+    <ng-container *ngFor="let book of booksList">
+      <app-book [book]="book" fxFlex="0 1 calc(33.3% - 0px)"></app-book>
+    </ng-container>
+  </div>
+
+</div>
