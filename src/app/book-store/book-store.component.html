@@ -1,7 +1,7 @@
 <div style="border: 1px solid black; padding: 10px;">
 
   <div style="width: 100%;">
-    <div fxLayout="col" fxLayout.xs="column">
+    <div fxLayout="col">
       <div fxFlex="50" style="text-align: center;">
         <span style="font-size: large;">Title</span>
         <span (click)="toggleSort('title')">
@@ -23,7 +23,7 @@
 
   <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutAlign="flex-start">
     <ng-container *ngFor="let book of booksList">
-      <app-book [book]="book" fxFlex="0 1 calc(33.3% - 0px)"></app-book>
+      <app-book [book]="book" fxFlex.sm="0 1 calc(100% - 0px)" fxFlex.md="0 1 calc(50% - 0px)" fxFlex.lg="0 1 calc(33.3% - 0px)"></app-book>
     </ng-container>
   </div>
 
