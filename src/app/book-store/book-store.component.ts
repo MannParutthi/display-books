@@ -43,7 +43,7 @@ export class BookStoreComponent implements OnInit {
           this.booksList.sort((book1, book2) => (String(book2.title)).localeCompare(String(book1.title)));
         }
         else {
-          this.booksList = JSON.parse(JSON.stringify(this.originalBooksList)) as typeof this.originalBooksList;
+          this.booksList = JSON.parse(JSON.stringify(this.originalBooksList));
         }
         break;
       }
@@ -58,7 +58,7 @@ export class BookStoreComponent implements OnInit {
           this.booksList.sort((book1, book2) => Number(book2.votes) - Number(book1.votes));
         }
         else {
-          this.booksList = JSON.parse(JSON.stringify(this.originalBooksList)) as typeof this.originalBooksList;
+          this.booksList = JSON.parse(JSON.stringify(this.originalBooksList));
         }
         break;
       }

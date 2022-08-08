@@ -1,15 +1,15 @@
-<mat-card class="card-container mat-elevation-z8">
+<mat-card class="card-container mat-elevation-z8" id="bookcard">
   <div fxLayout="row" fxLayout.xs="column">
     <div fxFlex="40" class="content-center-aligned">
-      <img [src]="book.image" height="100px" width="100px" />
+      <img id="image" [src]="book.image" height="100px" width="100px" />
     </div>
     <div fxFlex="60" class="content-center-aligned">
-      <div>
+      <div id="title">
         <a [href]="book.url"><b>{{ book.title }}</b></a>
       </div>
-      <div><b>Author:</b> {{ book.author }}</div>
-      <div><b>Category:</b> {{ book.category }}</div>
-      <div><b>Votes:</b> {{ book.votes }}</div>
+      <div id="author"><b>Author:</b> {{ book.author }}</div>
+      <div id="category"><b>Category:</b> {{ book.category }}</div>
+      <div id="votes"><b>Votes:</b> {{ book.votes }}</div>
     </div>
   </div>
 </mat-card>

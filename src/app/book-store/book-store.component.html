@@ -21,9 +21,9 @@
     </div>
   </div>
 
-  <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutAlign="flex-start">
-    <ng-container *ngFor="let book of booksList">
-      <app-book [book]="book" fxFlex.sm="0 1 calc(100% - 0px)" fxFlex.md="0 1 calc(50% - 0px)" fxFlex.lg="0 1 calc(33.3% - 0px)"></app-book>
+  <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutAlign="flex-start" id="booksList">
+    <ng-container *ngFor="let book of booksList; index as i">
+      <app-book [book]="book" id="book{{i}}" fxFlex.sm="0 1 calc(100% - 0px)" fxFlex.md="0 1 calc(50% - 0px)" fxFlex.lg="0 1 calc(33.3% - 0px)"></app-book>
     </ng-container>
   </div>
 
