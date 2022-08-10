@@ -1,5 +1,5 @@
-import { BookImage } from './bookImage.model';
+import { Book } from './book.model';
 
 export interface AppState {
-  readonly bookImage: Array<BookImage>;
+  readonly book: Array<Book>;
 }

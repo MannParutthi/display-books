@@ -9,7 +9,7 @@ import { BookComponent } from './book/book.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { StoreModule } from '@ngrx/store';
-import { BookImageReducer } from './store/reducers/bookImage.reducer';
+import { BookReducer } from './store/reducers/book.reducer';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { BookImageReducer } from './store/reducers/bookImage.reducer';
     BrowserAnimationsModule,
     MatCardModule,
     StoreModule.forRoot({
-      bookImage: BookImageReducer
+      bookImage: BookReducer
     }, {})
   ],
   providers: [],
