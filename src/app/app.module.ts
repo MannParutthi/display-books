@@ -7,7 +7,9 @@ import { BookStoreComponent } from './book-store/book-store.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BookComponent } from './book/book.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { StoreModule } from '@ngrx/store';
+import { BookImageReducer } from './store/reducers/bookImage.reducer';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    StoreModule.forRoot({
+      bookImage: BookImageReducer
+    }, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
