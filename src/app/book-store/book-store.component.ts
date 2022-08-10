@@ -24,7 +24,6 @@ export class BookStoreComponent implements OnInit {
   getListOfBooks(): void {
     this.bookStoreService.getBooksList().subscribe({
       next: (res) => {
-        console.log("next res ==> ", res);
         this.booksList = res;
         this.originalBooksList = JSON.parse(JSON.stringify(res)) as typeof res; // Deep Copy
       }
