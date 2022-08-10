@@ -8,7 +8,7 @@
         <a [href]="book.url"><b>{{ book.title }}</b></a>
       </div>
       <div id="author"><b>Author:</b> {{ book.author }}</div>
-      <div id="category"><b>Category:</b> {{ book.category }}</div>
+      <div id="category"><b>Category:</b> {{ book.category | titlecase }}</div>
       <div id="votes"><b>Votes:</b> {{ book.votes }}</div>
     </div>
   </div>
