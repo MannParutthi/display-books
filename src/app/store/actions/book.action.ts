@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Book } from '../models/book.model';
+import { BookModel } from 'src/app/interfaces/book.interface';
 
 export enum BookActionType {
   ADD_BOOK = '[BOOK] Add BOOK',
@@ -7,7 +7,7 @@ export enum BookActionType {
 
 export class AddBookAction implements Action {
   readonly type = BookActionType.ADD_BOOK;
-  constructor(public payload: Book) {}
+  constructor(public payload: BookModel) {}
 }
 
 export type BookAction = AddBookAction;

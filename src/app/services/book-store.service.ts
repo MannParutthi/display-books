@@ -5,7 +5,6 @@ import { BookModel } from '../interfaces/book.interface';
 import { Store } from '@ngrx/store';
 import { AppState } from '../store/models/appState.model';
 import { AddBookAction } from '../store/actions/book.action';
-import { Book } from '../store/models/book.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class BookStoreService {
 
   getBooksList(): Observable<BookModel[]> {
     let bookList = this.http.get(this.booksListJsonUrl);
-    bookList.forEach((book: Book) => {
+    bookList.forEach((book: BookModel) => {
       this.store.dispatch(new AddBookAction(book))
     });
     return bookList as Observable<BookModel[]>;

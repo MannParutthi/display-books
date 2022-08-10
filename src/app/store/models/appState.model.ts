@@ -1,5 +1,5 @@
-import { Book } from './book.model';
+import { BookModel } from 'src/app/interfaces/book.interface';
 
 export interface AppState {
-  readonly book: Array<Book>;
+  readonly book: Array<BookModel>;
 }
