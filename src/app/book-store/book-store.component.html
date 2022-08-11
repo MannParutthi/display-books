@@ -1,0 +1,30 @@
+<div class="book-store-container">
+
+  <div style="width: 100%;">
+    <div fxLayout="col">
+      <div fxFlex="50" class="sortby-title">
+        <span>Title</span>
+        <span (click)="toggleSort('title')">
+          <img *ngIf="titleSortStatus == 1" src="../../assets/sort-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="titleSortStatus == 2" src="../../assets/sort-down-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="titleSortStatus == 3" src="../../assets/sort-up-solid.svg" height="15px" width="15px"/>
+        </span>
+      </div>
+      <div fxFlex="50" class="sortby-title">
+        <span>Votes</span>
+        <span (click)="toggleSort('votes')">
+          <img *ngIf="votesSortStatus == 1" src="../../assets/sort-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="votesSortStatus == 2" src="../../assets/sort-down-solid.svg" height="15px" width="15px"/>
+          <img *ngIf="votesSortStatus == 3" src="../../assets/sort-up-solid.svg" height="15px" width="15px"/>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutAlign="flex-start" id="booksList">
+    <ng-container *ngFor="let book of booksList; index as i">
+      <app-book [book]="book" id="book{{i}}" fxFlex.sm="0 1 calc(100% - 0px)" fxFlex.md="0 1 calc(50% - 0px)" fxFlex.lg="0 1 calc(33.3% - 0px)"></app-book>
+    </ng-container>
+  </div>
+
+</div>
